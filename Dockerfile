@@ -27,4 +27,4 @@ COPY . .
 ENV SPARK_HOME /tmp/spark-2.2.0-bin-hadoop2.7
 ENV JAVA_OPTIONS "-Xmx1500m -XX:MaxPermSize=512m -Dakka.test.timefactor=3"
 
-CMD ["/usr/src/app/run_tests.sh"]
+CMD ["sbt /usr/src/app/job-server-extras/reStart"]
